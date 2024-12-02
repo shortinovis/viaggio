@@ -15,9 +15,13 @@ public class viaggioPasti extends viaggio{
     public void setPensioneComp(boolean pensioneComp) {
         PensioneComp = pensioneComp;
     }
+
+    @Override
     public String toString() {
         return super.toString() + " pensioneCompleta " + this.PensioneComp;
     }
+
+    @Override
     public boolean equals(Object o){
         if(o instanceof viaggio){
             viaggio r=(viaggio) o;
@@ -25,6 +29,8 @@ public class viaggioPasti extends viaggio{
         }
         return false;
     }
+
+    @Override
     public double getCosto() {
         if (GetPensioneComp()) {
             return super.getCosto() + getDurata()*35;

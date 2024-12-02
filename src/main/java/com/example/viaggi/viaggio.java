@@ -35,9 +35,12 @@ public class viaggio {
         this.costo = costo;
     }
 
+    @Override
     public String toString() {
         return "destinazione='" + destinazione + '\'' + ", durata=" + durata + ", costo=" + costo;
     }
+
+    @Override
     public boolean equals(Object o){
         if(o instanceof viaggio){
             viaggio r=(viaggio) o;

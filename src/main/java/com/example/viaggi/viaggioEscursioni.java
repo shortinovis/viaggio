@@ -15,9 +15,13 @@ public class viaggioEscursioni extends viaggioPasti{
     public void setEscursioni(int escursioni) {
         this.escursioni = escursioni;
     }
+
+    @Override
     public String toString() {
         return super.toString() + " escursioni " + this.escursioni;
     }
+
+    @Override
     public boolean equals(Object o){
         if(o instanceof viaggio){
             viaggio r=(viaggio) o;
@@ -25,6 +29,8 @@ public class viaggioEscursioni extends viaggioPasti{
         }
         return false;
     }
+
+    @Override
     public double getCosto() {
         return super.getCosto() + getEscursioni()*15;
     }

@@ -16,10 +16,12 @@ public class viaggioVolo extends viaggio {
         this.andataRitorno = andataRitorno;
     }
 
+    @Override
     public String toString() {
         return super.toString() + " andataRitono" + this.andataRitorno;
     }
 
+    @Override
     public boolean equals(Object o) {
         if (o instanceof viaggio) {
             viaggio r = (viaggio) o;
@@ -28,6 +30,7 @@ public class viaggioVolo extends viaggio {
         return false;
     }
 
+    @Override
     public double getCosto() {
         if (GetAndataRitorno()) {
             return super.getCosto() + super.getCosto() / 100 * 85;

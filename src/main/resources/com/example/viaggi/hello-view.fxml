@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.viaggi.HelloController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.viaggi.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <AnchorPane maxHeight="800.0" maxWidth="800.0" minHeight="1.0" minWidth="1.0" prefHeight="506.0" prefWidth="682.0" scaleZ="20.0">
+      <children>
+         <TextField fx:id="destinazione" layoutX="253.0" layoutY="41.0" promptText="destinazione" />
+         <TextField fx:id="durata" layoutX="253.0" layoutY="87.0" promptText="durata" />
+         <TextField fx:id="costo" layoutX="253.0" layoutY="141.0" promptText="costo" />
+         <TextField fx:id="andataeritorno" layoutX="253.0" layoutY="190.0" promptText="andata e ritorno" />
+         <Button layoutX="307.0" layoutY="335.0" mnemonicParsing="false" onAction="#aggiunta" text="invia" />
+         <TextField fx:id="penscomp" layoutX="254.0" layoutY="241.0" promptText="pensione completa" />
+         <TextField fx:id="escursioni" layoutX="254.0" layoutY="293.0" promptText="escursioni" />
+         <Label fx:id="labellina" layoutX="260.0" layoutY="409.0" prefHeight="63.0" prefWidth="136.0" />
+         <Button layoutX="287.0" layoutY="370.0" mnemonicParsing="false" text="costo medio" />
+      </children>
+   </AnchorPane>
 </VBox>

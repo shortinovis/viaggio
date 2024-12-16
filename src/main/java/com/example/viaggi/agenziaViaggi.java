@@ -17,8 +17,8 @@ public class agenziaViaggi {
     }
 
 
-    public viaggio[] getViaggios() { return v; }
-    public void setViaggios(viaggio[] viaggios) { this.v = viaggios; }
+    public viaggio[] getViaggio() { return v; }
+    public void setViaggio(viaggio[] viaggio) { this.v = viaggio; }
 
     public int getInseriti() { return inseriti; }
     public void setInseriti(int inseriti) { this.inseriti = inseriti; }
@@ -28,7 +28,7 @@ public class agenziaViaggi {
     public String toString() {
         String s="Elenco:\n";
         for (int i=0;i<this.inseriti;i++){
-            s=s+v[i].toString()+", costo: "+v[i].getCosto()+" \n";
+            s=s+v[i].toString()+", costo: "+v[i].getCostoViaggio()+" \n";
         }
         return s;
     }
@@ -37,7 +37,7 @@ public class agenziaViaggi {
         if(o instanceof agenziaViaggi){
             agenziaViaggi r=(agenziaViaggi) o;
             for (int i=0;i<this.inseriti;i++){
-                if (!v[i].equals(r.getViaggios()[i])){
+                if (!v[i].equals(r.getViaggio()[i])){
                     return false;
                 }
             }
@@ -59,33 +59,33 @@ public class agenziaViaggi {
     public double getCostoMedio(){
         double costo=0.0;
         for (int i=0;i<this.inseriti;i++){
-            costo+=v[i].getCosto();
+            costo+=v[i].getCostoViaggio();
         }
         return costo/this.inseriti;
     }
     public int getPosizionePacchettoMin(){
-        double costoMin=v[0].getCosto();
+        double costoMin=v[0].getCostoViaggio();
         int posMin=0;
         for (int i=0;i<this.inseriti;i++){
-            if (costoMin>v[i].getCosto()){
-                costoMin=v[i].getCosto();
+            if (costoMin>v[i].getCostoViaggio()){
+                costoMin=v[i].getCostoViaggio();
                 posMin=i;
             }
         }
         return posMin;
     }
     public int getPosizionePacchettoMax(){
-        double costoMax=v[0].getCosto();
+        double costoMax=v[0].getCostoViaggio();
         int posMax=0;
         for (int i=0;i<this.inseriti;i++){
-            if (costoMax<v[i].getCosto()){
-                costoMax=v[i].getCosto();
+            if (costoMax<v[i].getCostoViaggio()){
+                costoMax=v[i].getCostoViaggio();
                 posMax=i;
             }
         }
         return posMax;
     }
     public String getMinMax(){
-        return "MAX: "+v[getPosizionePacchettoMax()].toString()+"\n\n MIN: "+v[getPosizionePacchettoMin()].toString();
+        return "Max: "+v[getPosizionePacchettoMax()].toString()+"\n\n Min: "+v[getPosizionePacchettoMin()].toString();
     }
 }

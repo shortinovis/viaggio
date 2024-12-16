@@ -1,6 +1,6 @@
 package com.example.viaggi;
 
-public class viaggio {
+public abstract class viaggio {
     private String destinazione;
     private int durata;
     private double costo;
@@ -48,4 +48,5 @@ public class viaggio {
         }
         return false;
     }
+    public abstract  double getCostoViaggio();
 }

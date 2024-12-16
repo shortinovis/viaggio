@@ -31,7 +31,7 @@ public class viaggioVolo extends viaggio {
     }
 
     @Override
-    public double getCosto() {
+    public double getCostoViaggio() {
         if (GetAndataRitorno()) {
             return super.getCosto() + super.getCosto() / 100 * 85;
         }

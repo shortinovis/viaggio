@@ -31,7 +31,7 @@ public class viaggioEscursioni extends viaggioPasti{
     }
 
     @Override
-    public double getCosto() {
+    public double getCostoViaggio() {
         return super.getCosto() + getEscursioni()*15;
     }
 }

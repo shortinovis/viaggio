@@ -31,7 +31,7 @@ public class viaggioPasti extends viaggio{
     }
 
     @Override
-    public double getCosto() {
+    public double getCostoViaggio() {
         if (GetPensioneComp()) {
             return super.getCosto() + getDurata()*35;
         }
